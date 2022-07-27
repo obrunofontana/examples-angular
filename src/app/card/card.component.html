@@ -19,13 +19,9 @@
     Adiciona
   </button>
 
+  <app-lista
+    [listParam]="list"
+    [removeParam]="remove"
+  ></app-lista>
 
-  <ul>
-    <li *ngFor="let item of list; let indefOfElement=index;" >
-      {{item}}
-      <button (click)="remove(indefOfElement)" class="btn btn-outline-danger">
-        Remove
-      </button>
-    </li>
-  </ul>
 </div>
