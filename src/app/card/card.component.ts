@@ -12,10 +12,21 @@ export class CardComponent implements OnInit {
   @Input () link2Param: string = '';
   @Input () subtitleParam: string = '';
 
+  color: string = '#000';
 
   constructor() { }
 
   ngOnInit(): void {
+    let nota =3;
+
+    if (nota < 6) {
+      this.color = 'red'
+    } else if (nota === 6) {
+      this.color = 'yellow'
+    } else {
+      this.color = 'green'
+    }
+    console.log('qaqackockekewfkofewokewfkoewfkop');
   }
 
 }
