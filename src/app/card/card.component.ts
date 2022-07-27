@@ -14,6 +14,9 @@ export class CardComponent implements OnInit {
 
   color: string = '#000';
 
+  showFruit: boolean = false;
+  author: string = 'filipe';
+
   constructor() { }
 
   ngOnInit(): void {
