@@ -5,6 +5,7 @@
     <p class="card-text">{{bioParam}}</p>
     <a href={{link1Param}} class="card-link">Google</a>
     <a href={{link2Param}} class="card-link">Youtube</a>
+
   </div>
 
   <h2 *ngIf="author === 'joao'; else ehDoce">
@@ -14,4 +15,17 @@
     <h2>Chocolate</h2>
   </ng-template>
 
+  <button (click)="addNameOnList()" class="btn btn-outline-primary">
+    Adiciona
+  </button>
+
+
+  <ul>
+    <li *ngFor="let item of list; let indefOfElement=index;" >
+      {{item}}
+      <button (click)="remove(indefOfElement)" class="btn btn-outline-danger">
+        Remove
+      </button>
+    </li>
+  </ul>
 </div>

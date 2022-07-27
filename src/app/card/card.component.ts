@@ -17,7 +17,23 @@ export class CardComponent implements OnInit {
   showFruit: boolean = false;
   author: string = 'filipe';
 
-  constructor() { }
+  count = 0;
+
+  addNameOnList: any;
+  remove: any;
+
+  list: string[] = [];
+
+  constructor() {
+    this.remove = (index: number) => {
+      this.list.splice(index, 1);
+    }
+
+    this.addNameOnList = () => {
+      this.list.push('Bruno');
+      console.log('adicionou na lista: ', this.list);
+    }
+  }
 
   ngOnInit(): void {
     let nota =3;
